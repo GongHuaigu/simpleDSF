@@ -9,7 +9,9 @@ import java.io.IOException;
  * 编码工具方法接口
  */
 public interface MessageCodecUtil {
-    //final static int MESSAGE_LENGTH = 4;
+
+    //最小字节数  --  防止沾包
+    final static int MESSAGE_LENGTH = 4;
 
     void encode(final ByteBuf out,final Object message) throws IOException;
 
